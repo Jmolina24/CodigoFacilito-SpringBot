@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="htttp://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title th:text="${titulo}"></title>
+</head>
+
+<body>
+
+
+	<div>
+		El paramentro es: <span style="color: blueviolet;" th:text="${paramentro}"> </span>
+	</div>
+
+	<div>
+		El paramentro es: <span style="color: blueviolet;" th:text="${paramentro}"> </span>
+		El Segundo paramentro es: <span style="color: blueviolet;" th:text="${otrovalor}"> </span>
+	</div>
+
+
+	<div th:if="${jugador != null}">
+		<h2> URL Parametros por Path </h2>
+
+		El jugador es: <span style="color: violet;" th:text="${jugador.getNombre()}"></span>
+		(<span style="color: violet;" th:text="${jugador.getNumero()}"></span>)
+
+	</div>
+
+
+
+</body>
+
+</html>
