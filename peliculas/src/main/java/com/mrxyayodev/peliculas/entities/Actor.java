@@ -1,5 +1,7 @@
 package com.mrxyayodev.peliculas.entities;
 
+
+
 import java.io.Serializable;
 
 import jakarta.persistence.Column;
@@ -14,39 +16,43 @@ import jakarta.persistence.Table;
 public class Actor implements Serializable {
 
 	private static final long serialVersionUID = 415642889856472448L;
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	private String nombre;
-	
-	@Column(name="url_imagen")
-	private String urlImagen;
 
-	public Long getId() {
-		return id;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    private String nombre;
 
-	public String getNombre() {
-		return nombre;
-	}
+    @Column(name = "url_imagen")
+    private String urlImagen;
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public String getUrlImagen() {
-		return urlImagen;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setUrlImagen(String urlImagen) {
-		this.urlImagen = urlImagen;
-	}
-	
-	
-	
+    public String getNombre() {
+        return nombre;
+    }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getUrlImagen() {
+        return urlImagen;
+    }
+
+    public void setUrlImagen(String urlImagen) {
+        this.urlImagen = urlImagen;
+    }
+    
 }
+
+
+
+
+

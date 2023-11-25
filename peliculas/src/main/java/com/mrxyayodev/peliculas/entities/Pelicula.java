@@ -9,6 +9,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -27,7 +28,8 @@ public class Pelicula implements Serializable{
 	@Temporal(TemporalType.DATE)
 	private Date fechaEstreno;
 	private Genero genero;
-	private List<Actor> protagonista;
+	@ManyToMany
+	private List<Actor> protagonistas;
 	public Long getId() {
 		return id;
 	}
@@ -53,10 +55,10 @@ public class Pelicula implements Serializable{
 		this.genero = genero;
 	}
 	public List<Actor> getProtagonista() {
-		return protagonista;
+		return protagonistas;
 	}
-	public void setProtagonista(List<Actor> protagonista) {
-		this.protagonista = protagonista;
+	public void setProtagonista(List<Actor> protagonistas) {
+		this.protagonistas = protagonistas;
 	}
 	
 	
